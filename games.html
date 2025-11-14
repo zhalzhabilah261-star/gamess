@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Aplikasi Pecahan</title>
+     <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        /* CSS Umum */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+
+        /* CSS BARU UNTUK MENU DAN CONTAINER */
+        #menu-container, #calculator-container {
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 400px;
+            text-align: center;
+        }
+
+        .menu-option {
+            padding: 15px;
+            margin: 15px 0;
+            cursor: pointer;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-option:hover {
+            background-color: #e6f0ff;
+        }
+
+        .menu-option a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* CSS Kalkulator Lama (Disesuaikan) */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .fraction-input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .fraction-input label {
+            width: 70px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .fraction-parts {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .fraction-parts input[type="number"] {
+            width: 80px;
+            padding: 8px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .fraction-parts span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .operators {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .operators button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .operators button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #e2ffe8;
+            text-align: center;
+        }
+
+        .result p {
+            margin: 0;
+            font-size: 20px;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        #calculator-container button { /* Styling tombol kembali ke menu */
+            background-color: #6c757d; 
+        }
+        #calculator-container button:hover {
+            background-color: #5a6268;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="menu-container">
+        <h2>SELAMAT DATANG!!</h2>
+        <h2>ARNUM Learning Path ^~^</h2>
+        <div class="menu-option" onclick="showCalculator()">
+            <h4>1. Kalkulator Pecahan</h4>
+            <p>Lakukan operasi tambah, kurang, kali, dan bagi pecahan.</p>
+        </div>
+        <body>
+            <style>
+                body {
+            background-image:url(nezha.png.jpg);
+            height: 50rem;
+            weight: 1em;
+            background-size: cover;
+            background-position: ce;
+
+        } 
+        .calculator {
+            background-color:rgba(255, 255, 255, 0.4);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .fraction-input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .fraction-input label {
+            width: 70px;
+            font-weight: bold;
+            color: #2252ef;
+        }
+
+        .fraction-parts {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .fraction-parts input[type="number"] {
+            width: 80px;
+            padding: 8px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .fraction-parts span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .operators {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .operators button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .operators button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            background-color: #e2ffe8;
+            text-align: center;
+        }
+
+        .result p {
+            margin: 0;
+            font-size: 20px;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
+        </body>
+
+        <div class="menu-option">
+            <a href="https://zhalzhabilah261-star.github.io/scscsc/" target="_blank">
+            <h4>2. Tampilkan Model AR</h4>
+                <p>Lihat model pecahan menggunakan Augmented Reality.</p>
+            </a>
+        </div>
+        </body>
+
+        <div class="menu-option">
+            <a href="https://zhalzhabilah261-star.github.io/scscsc/" target="_blank">
+            <h4>3. AYO BERMAIN!!!</h4>
+                <p>Mari uji kecepatan dan ketepatanmu!.</p>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <div id="calculator-container" style="display: none;">
+    
+    <h2>Kalkulator Pecahan 📐</h2>
+
+    <div class="fraction-input">
+        <label for="num1_pembilang">Pecahan 1:</label>
+        <div class="fraction-parts">
+            <input type="number" id="num1_pembilang" placeholder="Pembilang" value="1">
+            <span>/</span>
+            <input type="number" id="num1_penyebut" placeholder="Penyebut" value="2">
+        </div>
+    </div>
+
+    <div class="fraction-input">
+        <label for="num2_pembilang">Pecahan 2:</label>
+        <div class="fraction-parts">
+            <input type="number" id="num2_pembilang" placeholder="Pembilang" value="3">
+            <span>/</span>
+            <input type="number" id="num2_penyebut" placeholder="Penyebut" value="4">
+        </div>
+    </div>
+
+    <div class="operators">
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">×</button>
+        <button onclick="calculate('/')">÷</button>
+    </div>
+
+    <div class="result">
+        <p>Hasil: <span id="result_display">0/1</span></p>
+    </div>
+
+    <div class="solution-section" style="margin-top: 25px;">
+        <h3>Pemecahan:</h3>
+        <div id="solution_content" style="padding: 10px; border: 1px dashed #ccc; min-height: 50px; text-align: left; font-size: 1.1em;">
+            Pilih operasi dan tekan tombol hitung.
+        </div>
+    </div>
+    <div style="margin-top: 20px; text-align: center;">
+         <button onclick="showMenu()">← Kembali ke Menu</button>
+    </div>
+
+</div>
+
+    </div>
+    <script>
+        
+        /* FUNGSI BARU UNTUK KONTROL TAMPILAN */
+        function showCalculator() {
+            // Sembunyikan menu, tampilkan kalkulator
+            document.getElementById('menu-container').style.display = 'none';
+            document.getElementById('calculator-container').style.display = 'block';
+        }
+
+        function showMenu() {
+            // Sembunyikan kalkulator, tampilkan menu
+            document.getElementById('menu-container').style.display = 'block';
+            document.getElementById('calculator-container').style.display = 'none';
+        }
+
+        /* FUNGSI PERHITUNGAN PECAHAN (Lama) */
+        
+        // Fungsi untuk mencari Faktor Pembagi Terbesar (FPB)
+        function gcd(a, b) {
+            return b ? gcd(b, a % b) : a;
+        }
+
+        /* FUNGSI PERHITUNGAN PECAHAN BARU */
+        
+        // Fungsi untuk mencari Faktor Pembagi Terbesar (FPB)
+        function gcd(a, b) {
+            a = Math.abs(a);
+            b = Math.abs(b);
+            return b ? gcd(b, a % b) : a;
+        }
+
+        // Fungsi untuk menyederhanakan pecahan dan menghasilkan solusi
+        function simplify(numerator, denominator, solutionHTML) {
+            
+            if (denominator === 0) {
+                return { result: "ERROR", solution: solutionHTML };
+            }
+            if (numerator === 0) {
+                return { result: "0/1", solution: solutionHTML + `Hasilnya adalah $\\frac{0}{${denominator}}$, disederhanakan menjadi $\\frac{0}{1}$.` };
+            }
+
+            const commonDivisor = gcd(Math.abs(numerator), denominator);
+            const simplifiedNum = numerator / commonDivisor;
+            const simplifiedDen = denominator / commonDivisor;
+
+     {
+               // Tambahkan langkah penyederhanaan ke solusiHTML
+            solutionHTML += `<div style="border-left: 3px solid #007bff; padding-left: 10px; margin-top: 15px;">
+                <p> Sederhanakan hasil \\(\\frac{${numerator}}{${denominator}}\\):</p>
+                <p>Pembilang dan Penyebut dibagi dengan FPB (${commonDivisor}).</p>
+                <p>Hasil Akhir: \\(\\frac{${simplifiedNum}}{${simplifiedDen}}\\)</p>
+                </div>`;
+
+            return { result: `${simplifiedNum}/${simplifiedDen}`, solution: solutionHTML };
+        }
+    }
+        // Fungsi utama untuk melakukan perhitungan
+        function calculate(operator) {
+            const n1 = parseInt(document.getElementById('num1_pembilang').value);
+            const d1 = parseInt(document.getElementById('num1_penyebut').value);
+            const n2 = parseInt(document.getElementById('num2_pembilang').value);
+            const d2 = parseInt(document.getElementById('num2_penyebut').value);
+            
+            const resultDisplay = document.getElementById('result_display');
+            const solutionContent = document.getElementById('solution_content');
+
+            let resultNum, resultDen;
+            let solution = '';
+
+            // Validasi Input
+            if (isNaN(n1) || isNaN(d1) || isNaN(n2) || isNaN(d2) || d1 === 0 || d2 === 0) {
+                resultDisplay.textContent = "Input tidak valid!";
+                solutionContent.innerHTML = "Error: Pastikan semua Pembilang dan Penyebut diisi dengan angka dan Penyebut tidak nol.";
+                return;
+            }
+
+            // --- Logika Solusi Langkah Demi Langkah ---
+            switch (operator) {
+                case '+':
+                    // Langkah 1: Samakan penyebut
+                    resultDen = d1 * d2;
+                    resultNum = (n1 * d2) + (n2 * d1);
+                    
+                    solution += `<h4>1. Samakan Penyebut:</h4>
+                        \\(\\frac{${n1}}{${d1}} + \\frac{${n2}}{${d2}} = \\frac{(${n1} \\times ${d2}) + (${n2} \\times ${d1})}{${d1} \\times ${d2}}\\)<br>
+                        \\(\\frac{${n1 * d2}}{${resultDen}} + \\frac{${n2 * d1}}{${resultDen}} = \\frac{${resultNum}}{${resultDen}}\\)`;
+                    break;
+
+                case '-':
+                    // Langkah 1: Samakan penyebut
+                    resultDen = d1 * d2;
+                    resultNum = (n1 * d2) - (n2 * d1);
+                    
+                    solution += `<h4>1. Samakan Penyebut:</h4>
+                        \\(\\frac{${n1}}{${d1}} - \\frac{${n2}}{${d2}} = \\frac{(${n1} \\times ${d2}) - (${n2} \\times ${d1})}{${d1} \\times ${d2}}\\)<br>
+                        \\(\\frac{${n1 * d2}}{${resultDen}} - \\frac{${n2 * d1}}{${resultDen}} = \\frac{${resultNum}}{${resultDen}}\\)`;
+                    break;
+                    
+                case '*':
+                    // Langkah 1: Kalikan langsung
+                    resultNum = n1 * n2;
+                    resultDen = d1 * d2;
+                    
+                    solution += `<h4>1. Kalikan Langsung:</h4>
+                        \\(\\frac{${n1}}{${d1}} \\times \\frac{${n2}}{${d2}} = \\frac{${n1} \\times ${n2}}{${d1} \\times ${d2}} = \\frac{${resultNum}}{${resultDen}}\\)`;
+                    break;
+                    
+                case '/':
+                    // Langkah 1: Balik dan Kalikan
+                    if (n2 === 0) {
+                        resultDisplay.textContent = "Pembagian dengan nol!";
+                        solutionContent.innerHTML = "Error: Pembagian dengan pecahan nol tidak diizinkan!";
+                        return;
+                    }
+                    resultNum = n1 * d2;
+                    resultDen = d1 * n2;
+                    
+                    solution += `<h4>1. Balik dan Kalikan:</h4>
+                        \\(\\frac{${n1}}{${d1}} \\div \\frac{${n2}}{${d2}} = \\frac{${n1}}{${d1}} \\times \\frac{${d2}}{${n2}} = \\frac{${resultNum}}{${resultDen}}\\)`;
+                    break;
+
+            }
+            
+            // Langkah 2: Penyederhanaan
+            const final = simplify(resultNum, resultDen, solution);
+            
+            // Tampilkan Hasil dan Solusi
+            resultDisplay.textContent = final.result;
+            solutionContent.innerHTML = final.solution;
+
+            // Render ulang formula MathJax
+            if (window.MathJax) {
+                MathJax.typesetPromise([solutionContent, resultDisplay]);
+            }
+        }
+    </script>
+</script>
+</body>
+</html>
+
